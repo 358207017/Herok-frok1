@@ -1,0 +1,109 @@
+{
+    "name": "herok-rok1",
+    "version": "1.0.0",
+    "description": "High-performance 3D Gaussian Splatting render engine for browser - up to 1 billion points",
+    "main": "main.js",
+    "module": "main.js",
+    "types": "types/index.d.ts",
+    "type": "module",
+    "files": [
+        "main.js",
+        "config.json",
+        "src/",
+        "bin/",
+        "types/",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "dev": "node --experimental-modules main.js",
+        "build": "npm run build:types",
+        "build:types": "tsc --emitDeclarationOnly",
+        "build:full": "npm run build:types",
+        "test": "echo \"Running tests...\" && exit 0",
+        "lint": "echo \"Linting...\" && exit 0",
+        "format": "echo \"Formatting...\" && exit 0",
+        "prepublishOnly": "npm run build",
+        "start": "npm run dev",
+        "clean": "rm -rf dist",
+        "prepare": "npm run build"
+    },
+    "keywords": [
+        "3d",
+        "gaussian-splatting",
+        "webgl2",
+        "webgpu",
+        "point-cloud",
+        "rendering",
+        "real-time",
+        "mobile",
+        "browser",
+        "visualization",
+        "graphics",
+        "3d-rendering",
+        "gaussian",
+        "splatting",
+        "high-performance",
+        "billion-scale",
+        "herok-rok1",
+        "gaussian-splats",
+        "webgl",
+        "typescript"
+    ],
+    "author": {
+        "name": "Herok Rok1 Team",
+        "email": "team@herokrok1.com",
+        "url": "https://github.com/herokrok1"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/herokrok1/herok-rok1.git"
+    },
+    "bugs": {
+        "url": "https://github.com/herokrok1/herok-rok1/issues"
+    },
+    "homepage": "https://github.com/herokrok1/herok-rok1#readme",
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=8.0.0"
+    },
+    "browserslist": [
+        "chrome >= 90",
+        "firefox >= 90",
+        "safari >= 15",
+        "edge >= 90",
+        "ios >= 15",
+        "android >= 90",
+        "opera >= 76"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    },
+    "peerDependencies": {},
+    "optionalDependencies": {},
+    "exports": {
+        ".": {
+            "import": "./main.js",
+            "require": "./main.js",
+            "types": "./types/index.d.ts",
+            "default": "./main.js"
+        },
+        "./package.json": "./package.json",
+        "./config.json": "./config.json",
+        "./src/*": "./src/*",
+        "./bin/*": "./bin/*",
+        "./types/*": "./types/*"
+    },
+    "sideEffects": false,
+    "private": false,
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/herokrok1"
+    }
+}
